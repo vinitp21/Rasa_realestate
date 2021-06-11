@@ -1,0 +1,308 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- buy_house:
+    use_entities: true
+- rent_house:
+    use_entities: true
+- 24k_stargazeB:
+    use_entities: true
+- 24k_atriaB:
+    use_entities: true
+- life_republicB:
+    use_entities: true
+- services:
+    use_entities: true
+- show more:
+    use_entities: true
+- thanks:
+    use_entities: true
+- 24k_atriaR:
+    use_entities: true
+- life_republicR:
+    use_entities: true
+- 24k_stargazeR:
+    use_entities: true
+- show _more:
+    use_entities: true
+- succesfull_projects:
+    use_entities: true
+- office_details:
+    use_entities: true
+- contact_us:
+    use_entities: true
+- complain_from:
+    use_entities: true
+- about_us:
+    use_entities: true
+- show_more:
+    use_entities: true
+- complain_form:
+    use_entities: true
+- start_rent:
+    use_entities: true
+- out_of_scope    
+- start    
+entities:
+- buy
+- rent
+- flat1
+- flat2
+- flat3
+- service
+- complain
+- contact
+- office
+- succesfull
+- succesful
+- about
+- projects
+slots:
+  address:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  bathrooms:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  bedrooms:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  city:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  cost:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  email:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  months:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  phone_number:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  property_type:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  time_to_rent:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  complain:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  country: 
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false 
+responses:
+  utter_greet:
+  - text: Hey!
+  utter_start:
+  - text: My name is acer. I am realtor with juppiter realtors.
+  utter_start1:
+  - buttons:
+    - payload: /buy_house
+      title: Buy Property
+    - payload: /rent_house
+      title: Rent Property
+    - payload: /about_us
+      title: About Juppiter Realtor
+    text: What can i do for you?
+  utter_ask_country:
+  - text: Oh Great! Which part of the country are you looking for?
+  utter_ask_email:
+  - text: What email address can we use to contact you back?
+  utter_ask_name:
+  - text: Can you help me with your name?
+  utter_ask_complain:
+  - text: What help do you want from us?
+  utter_ask_months:
+  - buttons:
+    - payload: In 0 to 3 Months
+      title: In 0 to 3 Months
+    - payload: In 3 to 6 Months
+      title: In 3 to 6 Months
+    - payload: In 6 to 9 Months
+      title: In 6 to 9 Mpnths
+    text: When are you looking to buy?
+  utter_ask_phone_number:
+  - text: Please provide your best contact number, so one of our experts can contact you.
+  utter_buy:
+  - text: I will help find the best place for you and your family
+  utter_submit_buy:
+  - text: Good. One of our agents will be in touch with you shortly.
+  utter_ask_bathrooms:
+  - text: Cool. How many bathrooms are you looking for?
+  utter_ask_bedrooms:
+  - text: Ok. How many bedrooms are you looking for?
+  utter_ask_property_type:
+  - buttons:
+    - payload: Condos
+      title: Condos
+    - payload: Attached
+      title: Attached
+    - payload: Dettached
+      title: Dettached
+    text: What property type are you interested in?
+  utter_ask_city:
+  - text: In which city will you like to live?
+  utter_ask_cost:
+  - buttons:
+    - payload: 20 to 30 lac.
+      title: 20 to 30 lac.
+    - payload: 40 to 50 lac.
+      title: 40 to 50 lac.
+    - payload: 50 to 60 lac.
+      title: 60 to 70 lac.
+    text: Great! How much are you comfortable spending on your new home?
+  utter_buy_flow:
+  - text: "We have some on going projects. Take a look :"
+    buttons:
+    - payload: life republic
+      title: Life Republic
+    - payload: 24k stargaze
+      title: 24K stargaze
+    - payload: 24k atria
+      title: 24k atria
+   
+  utter_life_republicB:
+  - text: 'Situated just 4.5 kilometres away from Hinjewadi, the IT hub of Pune, Kolte Patil Life Republic is a township with acres of undulating greens. Designed with one single objective: to create future-proof spaces and a meaningful way of life for the thinking minds, it is community built for all. Built with core values of creativity, sensitivity and sustainability, every sector of this township project in Pune offers you a luxurious lifestyle. Step into a life of inclusion; of freedom and expression; of sustainability and sensitivity; of democratic values and good governance; of ancient wisdom and modern conveniences. For more visit: https://www.koltepatil.com/pune/residential-properties/ongoing/life-republic'
+  utter_24k_stargazeB:
+  - text: 'Kolte-Patil Stargaze in Bavdhan, not only offers you a place to reside but a home where you’ll enjoy every moment with your friends and family. Located in Bavdhan, which is just 5-kms away from Kothrud, this residential project lets you enjoy excellent connectivity, while you stay amidst nature and away from chaos. From sparkling city landscapes on one side to mesmerising hill views on other side, this place is perfect to create beautiful memories with your loved ones. For more visit: https://www.koltepatil.com/pune/residential-properties/ongoing/24k-stargaze'
+  utter_24k_atriaB:
+  - text: 'Beautifully crafted to complement your chic and aristocratic personality, our exclusively designed residences at 24K Atria by Kolte-Patil Developers let you explore the true joy of grandeur. These ultra-lavish flats in Pune, with just two apartments on each floor, ensure complete privacy at all times. The ongoing project in Pune offers you the perks of smart living with cutting-edge home automation and electronic systems. Relax, rejuvenate, entertain or simply sip champagne with the crème-de-la-crème of society. Come, live exclusive. Only at 24K Atria. For more visit: https://www.koltepatil.com/pune/residential-properties/ongoing/24k-atria'
+  utter_confirm1:
+  - text: "Are you sure, you want to invest in this property"
+    buttons:
+    - payload: /thanks
+      title: "yes"
+    - payload: /buy_houses
+      title: "no"
+  
+  utter_thanks:
+  - text: "Good. One of our agents will be in touch with you shortly."
+           
+   
+  utter_confirm2:
+  - text: Are you sure you want to continue?
+    buttons:
+    - payload: /thanks
+      title: yes
+    - payload: /services
+      title: No
+    - title: See More
+      payload: /show_more          
+    
+  utter_ask_time_to_rent:
+  - buttons:
+    - payload: ASAP
+      title: ASAP
+    - payload: 3-6 Months
+      title: 3-6 Months
+    - payload: 6+ Months
+      title: 6+ Months
+    text: In order to provide you with valuation can you please let me know when you looking to rent the home?
+  utter_ask_rental:
+  - text: Which property would you like to select? Type the property name from above option!!
+  utter_life_republicR:
+  - text: Life Republic is a great choice.Our representative will contact you soon
+  utter_24_stargazeR:
+  - text: 24 stargaze is a great choice.Our representative will contact you soon
+  utter_24_atriaR:
+  - text: 24 atria is a great choice.Our representative will contact you soon
+  utter_about_juppiter:
+  - buttons:
+    - payload: /succesfull_projects
+      title: Succesfull projects
+    - payload: /office_details
+      title: Offices details
+    - payload: /contact_us
+      title: Contact us
+    text: We are serving our great customers form almost 16 years
+  utter_succesfull_project:
+  - text: The company has been creating landmarks for over 3 decades and has developed and constructed over 50 projects including residential complexes, commercial complexes and IT Parks covering a saleable area of ~20 million square feet across Pune, Mumbai and Bengaluru.
+  utter_office_details:
+  - text: |-
+      Pune Office 8th floor, City Bay, Dhole Patil Road, Pune - 411001 India. +91-20-6622 6500
+      Bengaluru Office Kolte Patil Developers Ltd, 121, The Estate Building, 10th Floor, Dickenson Road, Bangalore - 560042 India 080-4662-4444 / 2224-3135 / 2224-2803
+      Mumbai Office 501, 502, 5th floor, The Capital, Plot No. C 70, G - Block, Bandra-Kurla Complex, Bandra(E), Mumbai - 400051 India +91 22 6177 0100
+  utter_contact_us:
+  - buttons:
+    - payload: /complain_form
+      title: complain form
+    text: You can contact our representative on 1800-2666-654 (Sales Enquires Only) or you can state your problem here by taping on the button
+  utter_start_rent2:
+  - text: "* 2 bhk 
+           * 900 Sq ft.
+           * rent: 20K 
+           * deposit: 1 lac"  
+
+  utter_start_rent8:    
+  - text: "We have some properties for rental purpose, take a look:"
+    buttons:
+    - title: Oxy bonita 
+      payload: Oxy bonita
+    - title: Rise society
+      payload: Rise society
+    - title: See More
+      payload: /show_more
+    
+  utter_help1:
+  - text: "Anything else you want help with?"     
+
+  utter_out_of_scope:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase? 
+actions:
+- buy_form
+- rent_form
+- contact_form
+forms:
+  buy_form: {}
+  rent_form: {}
+  contact_form: {}
+e2e_actions: []

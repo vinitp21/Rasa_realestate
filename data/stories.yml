@@ -1,0 +1,118 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_start
+  - action: utter_start1
+  
+- story: buy
+  steps:
+  - intent: buy_house
+  - action: buy_form
+  - active_loop: buy_form
+  - active_loop: null
+  - action: utter_buy_flow
+
+- story: liferepublic
+  steps:
+  - intent: life_republicB
+  - action: utter_life_republicB
+  - action: utter_confirm1
+  - intent: thanks
+  - action: utter_thanks
+
+- story: 24kstargaze
+  steps:
+  - intent: 24k_stargazeB
+  - action: utter_24k_stargazeB
+  - action: utter_confirm1
+  - intent: thanks
+  - action: utter_thanks
+
+- story: 24katria
+  steps:
+  - intent: 24k_atriaB
+  - action: utter_24k_atriaB
+  - action: utter_confirm1
+  - intent: thanks
+  - action: utter_thanks
+
+- story: rent
+  steps:
+  - intent: rent_house  
+  - action: utter_start_rent8
+
+- story: service
+  steps:
+  - intent: services
+  - action: utter_start1
+
+- story: rent1
+  steps:
+  - intent: life_republicR
+  - action: utter_start_rent2
+  - action: utter_confirm2
+  
+- story: rent2
+  steps:
+  - intent: 24k_atriaR
+  - action: utter_start_rent2
+  - action: utter_confirm2
+
+
+- story: rent3
+  steps:
+  - intent: 24k_stargazeR
+  - action: utter_start_rent2
+  - action: utter_confirm2
+  
+  
+- story: show_more
+  steps:
+  - intent: show_more
+  - action: rent_form
+  - active_loop: rent_form
+  - active_loop: null
+  
+
+- story: about
+  steps:
+  - intent: about_us
+  - action: utter_about_juppiter
+
+- story: success
+  steps:
+  - intent: succesfull_projects
+  - action: utter_succesfull_project
+
+- story: contact
+  steps:
+  - intent: contact_us
+  - action: utter_contact_us
+  - intent: complain_form
+  - action: contact_form
+  - active_loop: contact_form
+  - active_loop: null
+
+
+- story: office
+  steps:
+  - intent: office_details
+  - action: utter_office_details
+
+
+
+
+
+
+
+
+  
+  
+  
+
+

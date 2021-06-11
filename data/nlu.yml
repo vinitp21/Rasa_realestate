@@ -1,0 +1,141 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: buy_house
+  examples: |
+    - i want to [buy](buy)
+    - i want a [new](buy) house
+    - [buy](buy)a house
+    - Can you show me [new](buy)
+    - [buy] me a house?
+    - show me [ongoing](buy) projects
+    - can you show me going on [projects](buy)
+
+- intent: rent_house
+  examples: |
+    - i want to [rent](rent)
+    - i want a [rent](rent) house
+    - [rent](rent)a house
+    - Can you show me [rent](rent)    
+    - house [rent](rent)
+    - [rent] me a house
+    - I want [rental] house
+
+- intent: about_us
+  examples: |
+    - tell me about your [company](about)
+    - i want to know [about](about) your company
+    - [about](about)
+    - i want to know [information](about) your company
+- intent: life_republicB
+  examples: |
+    - i want flat in [life republic](flat1)
+    - [life republic](flat1)
+    - look for [life republic](flat1)
+
+- intent: 24k_stargazeB
+  examples: |
+    - i want flat in [24k stargaze](flat2)
+    - [24k stargaze](flat2)
+    - look for [24k stargaze](flat2)     
+
+- intent: 24k_atriaB
+  examples: |
+    - i want flat in [24k atria](flat3)
+    - [24k atria](flat3)
+    - look for [24k atria](flat3)  
+
+- intent: thanks
+  examples: |
+    - thankyou
+    - thankyou for assistance 
+    - thanks for support    
+
+- intent: "services"    
+  examples: |
+    - Show me your [services](service)
+    - i want to see what your [company provide](service)
+    - which [service](service) do you provide
+
+- intent: life_republicR
+  examples: |
+    - i want flat in [rise society](flat1)
+    - [rise society](flat1)
+    - look for [ rise society](flat1)
+
+- intent: 24k_stargazeR
+  examples: |
+    - i want flat in [gold star](flat2)
+    - [gold star](flat2)
+    - look for [gold star](flat2)     
+
+- intent: 24k_atriaR
+  examples: |
+    - i want flat in [oxy bonita](flat3)
+    - [oxy bonita](flat3)
+    - look for [oxy bonita](flat3)      
+
+- intent: show_more
+  examples: |
+    - i want to see more houses
+    - i want to see different houses
+    - show me more rental houses    
+    - show more
+
+- intent: succesfull_projects
+  examples: |
+    - show me [succesfull](succesful) projects
+    - [succesfull](succesful)    
+    - show me [all projects](succesfull)
+    - show me [completed](projects)
+
+- intent: office_details
+  examples: |
+    - show me [office](office)details    
+    - can you show me your [office](office) deatails
+    - [office](office) details
+
+- intent: contact_us
+  examples: |
+    - how to [contact](contact) us
+    - i want to [contact](contact) representative
+    - i want to [talk](contact) company
+    - can i [talk](contact) to customer service
+    - [customer](contact) service
+
+- intent: complain_from
+  examples: |
+    - i want to fill [complain form](complain)
+    - fill [comlplain](complain) form
+    - fill [form](complain)
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - i want to book a cab
+    - i need to go to hospital
+    - i want to eat food
+    - i want to drink water    
+
+
+    
+
+        
